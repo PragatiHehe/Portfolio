@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./Favicon1.png">
   <style>
+    /* Ensure the html and body take up the full height and prevent overflow */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevents scrolling */
+    }
+
     body {
       background-color: black;
-      margin: 0;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,16 +28,15 @@
       display: none;
     }
 
-    /* Show desktop image by default */
     .image-desktop {
       display: block;
     }
 
-    /* On small screens (phones), show the mobile image */
     @media (max-width: 768px) {
       .image-desktop {
         display: none;
       }
+
       .image-mobile {
         display: block;
       }
@@ -40,6 +45,6 @@
 </head>
 <body>
   <img src="./Group377.png" alt="coming soon image" class="image-desktop" />
-  <img src="./Group378.png" alt="coming soon mobile image" class="image-mobile" />
+  <img src="./Group377-mobile.png" alt="coming soon mobile image" class="image-mobile" />
 </body>
 </html>

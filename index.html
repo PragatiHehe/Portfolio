@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pragati Vishwakarma</title>
+  <title>Pragati Vishwakarma</title>
   <link rel="icon" type="image/x-icon" href="./Favicon1.png">
   <style>
     body {
@@ -12,14 +12,33 @@
       justify-content: center;
       align-items: center;
     }
-    img {
+
+    .image-desktop,
+    .image-mobile {
       object-fit: contain;
       max-width: 100%;
       max-height: 100%;
+      display: none;
+    }
+
+    /* Show desktop image by default */
+    .image-desktop {
+      display: block;
+    }
+
+    /* On small screens (phones), show the mobile image */
+    @media (max-width: 768px) {
+      .image-desktop {
+        display: none;
+      }
+      .image-mobile {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="./Group377.png" alt="coming soon image" />
+  <img src="./Group377.png" alt="coming soon image" class="image-desktop" />
+  <img src="./Group378.png" alt="coming soon mobile image" class="image-mobile" />
 </body>
 </html>
